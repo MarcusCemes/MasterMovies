@@ -12,7 +12,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 13.x
+          node-version: 14.x
       - name: Install dependencies
         uses: bahmutov/npm-install@v1.1.0
 
@@ -22,18 +22,18 @@ jobs:
         env:
           CI: true
           API_URL: "https://api.mastermovies.uk"
-      - name: Upload build artifact
+      - name: Upload build artifact (disabled)
         uses: actions/upload-artifact@v1.0.0
-        if: github.ref == 'refs/heads/master'
+        if: false && github.ref == 'refs/heads/master'
         with:
           name: build
           path: public/
 
   deploy:
-    name: Deploy to SnowOwl
+    name: Deploy to SnowOwl (disabled)
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: false && github.ref == 'refs/heads/master'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v1.0.0
