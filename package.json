@@ -72,10 +72,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarcusCemes/mastermovies"
+    "url": "https://github.com/MarcusCemes/mastermovies-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/MarcusCemes/mastermovies/issues"
+    "url": "https://github.com/MarcusCemes/mastermovies-gatsby/issues"
   },
   "config": {
     "commitizen": {

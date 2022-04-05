@@ -23,6 +23,8 @@ interface IBuildInformation {
   gitDate: number | false;
 }
 
+const GITHUB_REPO = "MarcusCemes/mastermovies-gatsby";
+const GITHUB_API_REPO = "MarcusCemes/mastermovies-api-gatsby";
 const STATUS_SIZE = 18;
 
 export const StatusCardsSite: React.FC = () => {
@@ -69,7 +71,7 @@ const Banner: React.FC = () => {
 const Build: React.FC<{ info: IBuildInformation }> = ({ info }) => {
   const production = process.env.NODE_ENV === "production";
   const [data, error] = useRequest<{ commit?: { sha: string } }>(
-    production ? "https://api.github.com/repos/MarcusCemes/mastermovies/branches/master" : null
+    production ? `https://api.github.com/repos/${GITHUB_REPO}/branches/master` : null
   );
   const upToDate = data && data.commit ? data.commit.sha === info.gitCommit : null;
 
@@ -118,8 +120,8 @@ const Build: React.FC<{ info: IBuildInformation }> = ({ info }) => {
 
 /** Displays API information, such as version */
 const Api: React.FC = () => {
-  const [data, error] = useRequest("https://api.github.com/repos/MarcusCemes/mastermovies-api/branches/master");
-  const [pkg] = useRequest("https://raw.githubusercontent.com/MarcusCemes/mastermovies-api/master/package.json");
+  const [data, error] = useRequest(`https://api.github.com/repos/${GITHUB_API_REPO}/branches/master`);
+  const [pkg] = useRequest(`https://raw.githubusercontent.com/${GITHUB_API_REPO}/master/package.json`);
 
   let version: string;
   try {
@@ -162,12 +164,12 @@ const Api: React.FC = () => {
 /** Links to source code repositories */
 const Links: React.FC = () => (
   <StatusCardRow>
-    <a href="https://github.com/MarcusCemes/mastermovies" target="_blank">
+    <a href={`https://github.com/${GITHUB_REPO}`} target="_blank">
       <div className={styles.link}>
         <IconMargin icon={GithubOutlined} right /> Website repository
       </div>
     </a>
-    <a href="https://github.com/MarcusCemes/mastermovies" target="_blank">
+    <a href={`https://github.com/${GITHUB_REPO}`} target="_blank">
       <div className={styles.link}>
         <IconMargin icon={GithubOutlined} right /> API repository
       </div>

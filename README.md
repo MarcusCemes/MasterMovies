@@ -15,15 +15,13 @@ This repository was archived on 2020-12-18 in favour of a new website repository
     <br />
     <a href="https://mastermovies.uk"><strong>Visit MasterMovies »</strong></a>
     &nbsp;
-    <a href="https://github.com/MarcusCemes/mastermovies-api"><strong>see the API »</strong></a>
+    <a href="https://github.com/MarcusCemes/mastermovies-gatsby-api"><strong>see the API »</strong></a>
   </p>
 </p>
-
 
 Welcome to the open-source repository for the MasterMovies domain. Feel free to explore the inner workings of the website and see if you can find a way to break it!
 
 This repository may be forced-pushed at any time.
-
 
 ## Getting Started
 
@@ -33,7 +31,7 @@ MasterMovies is a build with Gatsby, a static website generator. Content is "ser
 
 ### Prerequisites
 
-* Node.js (+npm)
+- Node.js (+npm)
 
 ## Install, Build and Launch
 
@@ -43,7 +41,7 @@ MasterMovies is a build with Gatsby, a static website generator. Content is "ser
 4. Serve it!
 
 ```bash
-$ git clone https://github.com/MarcusCemes/mastermovies-api.git
+$ git clone https://github.com/MarcusCemes/mastermovies-gatsby-api.git
 $ npm ci
 $ npm run develop # Edit with hot-reloading
 $ npm run build   # Build static website files

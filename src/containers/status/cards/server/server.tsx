@@ -1,5 +1,4 @@
 import React from "react";
-
 import { AnimatedCheck } from "../../../../components/common/animated_check";
 import {
   StatusCard,
@@ -16,12 +15,25 @@ const STATUS_SIZE = 18;
 export const StatusCardsServer: React.FC = () => {
   return (
     <StatusCard>
-      <Server />
-      <StatusCardDivider />
       <CDN />
+      <StatusCardDivider />
+      <Server />
     </StatusCard>
   );
 };
+
+/** Displays Cloudflare information */
+const CDN: React.FC = () => (
+  <StatusCardRow align>
+    <StatusCardIcon>
+      <AnimatedCheck active size={STATUS_SIZE} />
+    </StatusCardIcon>
+    <div>
+      <StatusCardText>Served by Vercel</StatusCardText>
+      <StatusCardSubText>Content Delivery Network</StatusCardSubText>
+    </div>
+  </StatusCardRow>
+);
 
 /** Displays information about the server */
 const Server: React.FC = () => (
@@ -31,20 +43,7 @@ const Server: React.FC = () => (
     </StatusCardIcon>
     <div>
       <StatusCardText>Everything seems fine</StatusCardText>
-      <StatusCardSubText>SnowOwl</StatusCardSubText>
-    </div>
-  </StatusCardRow>
-);
-
-/** Displays Cloudflare information */
-const CDN: React.FC = () => (
-  <StatusCardRow align>
-    <StatusCardIcon>
-      <AnimatedCheck active size={STATUS_SIZE} />
-    </StatusCardIcon>
-    <div>
-      <StatusCardText>Protected by Cloudflare</StatusCardText>
-      <StatusCardSubText>Content Delivery Network</StatusCardSubText>
+      <StatusCardSubText>SnowOwl VM</StatusCardSubText>
     </div>
   </StatusCardRow>
 );

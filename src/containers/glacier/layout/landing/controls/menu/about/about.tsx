@@ -27,9 +27,10 @@ export const GlacierMenuAbout: React.FC<{
 
         <p>
           Glacier is securely hosted on SnowOwl, the primary backend providing many of MasterMovies' services. The
-          source code is available publicly on <Link to="https://github.com/MarcusCemes/mastermovies">GitHub</Link>. The
-          backend Restful-based API is powered by Nginx, Node.js and Postgres, using JSON Web Tokens for secure session
-          exchange and download authorisation.
+          source code is available publicly on{" "}
+          <Link to="https://github.com/MarcusCemes/mastermovies-gatsby">GitHub</Link>. The backend Restful-based API is
+          powered by Nginx, Node.js and Postgres, using JSON Web Tokens for secure session exchange and download
+          authorisation.
         </p>
         <p className={styles.copyrightNotice}>Copyright © {Math.min(2020, new Date().getFullYear())} Marcus Cemes</p>
       </div>
