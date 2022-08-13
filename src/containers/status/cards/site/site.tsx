@@ -169,7 +169,7 @@ const Links: React.FC = () => (
         <IconMargin icon={GithubOutlined} right /> Website repository
       </div>
     </a>
-    <a href={`https://github.com/${GITHUB_REPO}`} target="_blank">
+    <a href={`https://github.com/${GITHUB_API_REPO}`} target="_blank">
       <div className={styles.link}>
         <IconMargin icon={GithubOutlined} right /> API repository
       </div>
